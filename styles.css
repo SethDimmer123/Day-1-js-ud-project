@@ -32,7 +32,7 @@ body{
     flex:0.5;/*sets the width of the panels*/
     margin: 10px;
     position:relative;
-    transition:flex 0.7s ease in ;/*when i change the size for the active 
+    transition:all 700ms ease-in;/*when i change the size for the active 
     i want to not just flick to a bigger size or bigger width but also have a
      transition. */
 }
@@ -55,6 +55,7 @@ body{
 
 .panel.active h3{
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 /* now i want to make it if the screen is realy small 
