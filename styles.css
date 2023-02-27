@@ -1,18 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
 body{
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Muli','sans-serif';
     margin: 0;
     display: flex; /*i want to center everything*/
-    flex-direction: column;
     align-items: center;
     /* i have centered everything horizontally */
     justify-content: center;
     height: 100vh; /*100vh means takes up the entire height of the browser*/
     overflow:hidden;
     /*hides the scroll bars */
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex:0.5;/*sets the width of the panels*/
+    margin: 10px;
+    position:relative;
+    transition:flex 0.7s ease in ;/*when i change the size for the active 
+    i want to not just flick to a bigger size or bigger width but also have a
+     transition. */
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    /* i only want the h3 to show if it is active */
+    /* so by default since i didnt click any of the cards
+    i want the h3 to be invisible */
+}
+
+.panel.active{
+    flex:5;
+}
+
+.panel.active h3{
+    opacity: 1;
+}
+
+/* now i want to make it if the screen is realy small 
+then only show 3 cards instead of 5  i use medi query to do that.  */
+
+
+@media(max-width:768px) {
+    .container{             
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), /*the 4th and 5th panel will not be displayed*/
+    .panel:nth-of-type(5){
+        display: none;
+    }
 }
