@@ -7,7 +7,7 @@ const panels = document.querySelectorAll('.panel')
 
 // console.log(panels); 
 //prints out NodelIst of each div class of panel and on the first one active
-panels.forEach((panel) => { // i passin the purple () what i want to use for each iteration
+panels.forEach((panel) => { // im passin the purple () what i want to use for each iteration
     // console.log(panel)
     // in the console it will show me each panel
 
@@ -31,6 +31,6 @@ function removeActiveClasses() {
 }
 
 
-// first i create the function to remove all the active classes when i open 1 of them
+// first i create the function to remove all the active classes when i open ONE of them
 
 // then i need to call the function by placing it in the click event(line 15)
